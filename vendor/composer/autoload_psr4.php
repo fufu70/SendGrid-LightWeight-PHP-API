@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Common\\' => array($vendorDir . '/fufu70/reflection-class/src'),
 );

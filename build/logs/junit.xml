@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="CommonPHP" tests="2" assertions="2" failures="0" errors="0" time="0.514045">
-    <testsuite name="SendGrid_Restful\Test\CurlTest" file="/Users/Fuzzy/milf/SendGrid-LightWeight-PHP-API/tests/Curl.php" tests="2" assertions="2" failures="0" errors="0" time="0.514045">
-      <testsuite name="SendGrid_Restful\Test\CurlTest::test_post" tests="1" assertions="1" failures="0" errors="0" time="0.338666">
-        <testcase name="test_post with data set #0" assertions="1" time="0.338666"/>
+  <testsuite name="CommonPHP" tests="3" assertions="3" failures="0" errors="0" time="0.352793">
+    <testsuite name="SendGrid_Restful\Test\CurlTest" file="/Users/Fuzzy/milf/SendGrid-LightWeight-PHP-API/tests/Curl.php" tests="2" assertions="2" failures="0" errors="0" time="0.352194">
+      <testsuite name="SendGrid_Restful\Test\CurlTest::test_post" tests="1" assertions="1" failures="0" errors="0" time="0.294067">
+        <testcase name="test_post with data set #0" assertions="1" time="0.294067"/>
       </testsuite>
-      <testsuite name="SendGrid_Restful\Test\CurlTest::test_get" tests="1" assertions="1" failures="0" errors="0" time="0.175379">
-        <testcase name="test_get with data set #0" assertions="1" time="0.175379"/>
+      <testsuite name="SendGrid_Restful\Test\CurlTest::test_get" tests="1" assertions="1" failures="0" errors="0" time="0.058127">
+        <testcase name="test_get with data set #0" assertions="1" time="0.058127"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="SendGrid_Restful\Test\SendGridTest" file="/Users/Fuzzy/milf/SendGrid-LightWeight-PHP-API/tests/SendGrid.php" tests="1" assertions="1" failures="0" errors="0" time="0.000599">
+      <testsuite name="SendGrid_Restful\Test\SendGridTest::test_send" tests="1" assertions="1" failures="0" errors="0" time="0.000599">
+        <testcase name="test_send with data set #0" assertions="1" time="0.000599"/>
       </testsuite>
     </testsuite>
   </testsuite>

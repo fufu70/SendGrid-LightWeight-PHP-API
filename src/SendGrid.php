@@ -9,6 +9,8 @@
 
 namespace SendGrid_Restful;
 
+use Common\Reflection;
+
 /**
  * The SendGrid class.
  * 
@@ -23,6 +25,8 @@ class SendGrid extends \CApplicationComponent
     const BUTTON_TEXT = '[%button_text%]';
     const BUTTON_LINK = '[%button_link%]';
     const PREHEADER = '[%preheader-text%]';
+
+    private static $_curl_class = 'SendGrid_Restful\\Curl';
 
     /** 
      * Sends a post to the SendGrid api.
@@ -41,7 +45,7 @@ class SendGrid extends \CApplicationComponent
                 'templates' => [
                     'settings' => [
                         'enable' => 1, 
-                        'template_id' => Yii::app()->params->send_grid['template_id']
+                        'template_id' => \Yii::app()->params->send_grid['template_id']
                     ]
                 ]
             ]
@@ -73,11 +77,11 @@ class SendGrid extends \CApplicationComponent
     private static function send_w_smtp($to = '', $subject = '', array $js = [])
     {
         $params = [
-            'api_user'  => Yii::app()->params->send_grid['username'],
-            'api_key'   => Yii::app()->params->send_grid['password'],
+            'api_user'  => \Yii::app()->params->send_grid['username'],
+            'api_key'   => \Yii::app()->params->send_grid['password'],
             'to'        => $to,
-            'from'      => Yii::app()->params->adminEmail,
-            'fromname'  => Yii::app()->params->send_grid['name'],
+            'from'      => \Yii::app()->params->adminEmail,
+            'fromname'  => \Yii::app()->params->send_grid['name'],
             'text'      => $js['sub'][self::TEXT][0],
             'html'      => $js['sub'][self::TEXT][0],
             'subject'   => $subject,
@@ -85,10 +89,14 @@ class SendGrid extends \CApplicationComponent
         ];
 
         $options = [
-            CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . Yii::app()->params->send_grid['key']],
+            CURLOPT_HTTPHEADER => ['Authorization: Bearer ' . \Yii::app()->params->send_grid['key']],
             CURLOPT_SSLVERSION => 6
         ];
 
-        return Curl::curl_post(self::URL, $params, $options);
+        return Reflection::callMethod(
+            'post',
+            self::$_curl_class,
+            [self::URL, $params, $options]
+        );
     }
 }

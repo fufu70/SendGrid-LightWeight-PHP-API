@@ -33,7 +33,7 @@ To include the SendGrid-LightWeight-PHP-API in your composer file add the repo d
 }
 ```
 
-Add in your Sendgrid specific parameters inside of 
+Add in your Sendgrid specific parameters inside of your config/params.php file
 
 ```php
 <?php

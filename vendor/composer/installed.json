@@ -95,5 +95,40 @@
             "framework",
             "yii"
         ]
+    },
+    {
+        "name": "fufu70/reflection-class",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/fufu70/ReflectionClass.git",
+            "reference": "60162bf3aa55556930c5b5b7c5553dfeb36fd578"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/fufu70/ReflectionClass/zipball/60162bf3aa55556930c5b5b7c5553dfeb36fd578",
+            "reference": "60162bf3aa55556930c5b5b7c5553dfeb36fd578",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.1.0",
+            "yiisoft/yii": "1.1.*"
+        },
+        "time": "2017-04-28 03:14:59",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Common\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "support": {
+            "source": "https://github.com/fufu70/ReflectionClass/tree/master",
+            "issues": "https://github.com/fufu70/ReflectionClass/issues"
+        }
     }
 ]

@@ -1,7 +1,16 @@
 {
-    "name": "SendGrid-LightWeight-API",
+    "name": "fufu70/sendgrid-lightweight-api",
+    "type": "library",
+    "license": "MIT",
+    "repositories": [
+    	{ 
+	      "type": "vcs", 
+	      "url": "https://github.com/fufu70/ReflectionClass.git"
+	    }
+    ],
     "require": {
         "php": ">=5.1.0",
-        "yiisoft/yii": "1.1.*"
+        "yiisoft/yii": "1.1.*",
+        "fufu70/reflection-class": "dev-master"
     }
 }
