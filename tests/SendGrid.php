@@ -50,6 +50,20 @@ class SendGridTest extends \PHPUnit_Framework_TestCase
                     SendGrid::PREHEADER => 'This is my preheader'
                 ],
                 '{"message":"success"}'
+            ],
+            [
+                [
+                    "christian.micklisch@successwithsos.com",
+                    "example@email.com"
+                ],
+                "Are Cookies Even Real?",
+                [
+                    SendGrid::TEXT => 'This is my text',
+                    SendGrid::BUTTON_TEXT => 'This is my button text',
+                    SendGrid::BUTTON_LINK => 'This is my button link',
+                    SendGrid::PREHEADER => 'This is my preheader'
+                ],
+                '{"message":"success"}'
             ]
         ];
     }
