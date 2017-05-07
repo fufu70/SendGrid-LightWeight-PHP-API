@@ -2,7 +2,7 @@
 
 /**
  * Contains the SendGrid class.
- * 
+ *
  * @package SendGrid_Restful
  * @author  Christian Micklisch <christian.micklisch@successwithsos.com>
  */
@@ -13,9 +13,9 @@ use Common\Reflection;
 
 /**
  * The SendGrid class.
- * 
+ *
  * Calls the sendgrid api to send an email.
- * 
+ *
  * @author Christian Micklisch <christian.micklisch@successwithsos.com>
  */
 class SendGrid extends \CApplicationComponent
@@ -30,7 +30,7 @@ class SendGrid extends \CApplicationComponent
 
     /** 
      * Sends a post to the SendGrid api.
-     * 
+     *
      * @param  string $to      Whom to send the email.
      * @param  string $subject The title of the email.
      * @param  string $sub     The substitutions.
@@ -44,37 +44,35 @@ class SendGrid extends \CApplicationComponent
             'filters' => [
                 'templates' => [
                     'settings' => [
-                        'enable' => 1, 
+                        'enable' => 1,
                         'template_id' => \Yii::app()->params->send_grid['template_id']
                     ]
                 ]
             ]
         ];
 
-        if (is_array($to))
-        {
+        if (is_array($to)) {
             $last = '';
-            foreach ($to as $email)
-                $last = self::send_w_smtp($email, $subject, $js);
+            foreach ($to as $email) {
+                $last = self::sendSMTP($email, $subject, $js);
+            }
 
             return $last;
-        }
-        else if (is_string($to))
-        {
-            return self::send_w_smtp($to, $subject, $js);
+        } else if (is_string($to)) {
+            return self::sendSMTP($to, $subject, $js);
         }
 
     }
 
     /**
      * Sends the email with the x-smtpapi data.
-     * 
+     *
      * @param  string $to      Whom to send the email.
      * @param  string $subject Title of the email
      * @param  array  $js      Collection substitutions. with template.
      * @return string          The result of sending the email.
      */
-    private static function send_w_smtp($to = '', $subject = '', array $js = [])
+    private static function sendSMTP($to = '', $subject = '', array $js = [])
     {
         $params = [
             'api_user'  => \Yii::app()->params->send_grid['username'],

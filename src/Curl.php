@@ -31,7 +31,7 @@ class Curl
      * @param  array      $options CURL options to append to the default options.
      * @return string              The Response to the post curl call.
      */
-    public static function post($url = "/", array $post = NULL, array $options = []) 
+    public static function post($url = "/", array $post = null, array $options = []) 
     { 
         $defaults = [
             CURLOPT_POST => 1,
@@ -68,7 +68,7 @@ class Curl
      * @param  array      $options CURL options to append to the default options.
      * @return string              The Response to the get curl call.
     */ 
-    public static function get($url = "/", array $get = NULL, array $options = [])
+    public static function get($url = "/", array $get = null, array $options = [])
     {
         $defaults = [
             CURLOPT_URL => $url. (strpos($url, '?') === FALSE ? '?' : ''). http_build_query($get),
