@@ -28,7 +28,7 @@ class SendGrid extends \CApplicationComponent
 
     private static $_curl_class = 'SendGrid_Restful\\Curl';
 
-    /** 
+    /**
      * Sends a post to the SendGrid api.
      *
      * @param  string $to      Whom to send the email.
@@ -36,7 +36,7 @@ class SendGrid extends \CApplicationComponent
      * @param  string $sub     The substitutions.
      * @return string          The result of sending the email.
      */
-    public static function send($to = '', $subject = '', array $sub = []) 
+    public static function send($to = '', $subject = '', array $sub = [])
     {
 
         $js = [
@@ -58,10 +58,9 @@ class SendGrid extends \CApplicationComponent
             }
 
             return $last;
-        } else if (is_string($to)) {
-            return self::sendSMTP($to, $subject, $js);
         }
 
+        return self::sendSMTP($to, $subject, $js);
     }
 
     /**
