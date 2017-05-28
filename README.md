@@ -12,14 +12,22 @@ This allows for a reusable templating structure that can accomodate most general
 
 ## Usage
 
-To include the SendGrid-LightWeight-PHP-API in your composer file add the repo directory into your repositories section in the composer file and add the name of the module into the require section of the composer file.
+To include the SendGrid-LightWeight-PHP-API in your composer file add the repo directory into your repositories section in the composer file and add the name of the module into the require section of the composer file. Also include the [ReflectionClass](https://github.com/fufu70/ReflectionClass), and [CurlClass](https://github.com/fufu70/CurlClass).
 
 ```
 "repositories": {
     ...
     { 
-      "type": "vcs", 
+      "type": "vcs",
       "url": "https://github.com/fufu70/SendGrid-LightWeight-PHP-API.git"
+    },
+    { 
+      "type": "vcs",
+      "url": "https://github.com/fufu70/ReflectionClass.git"
+    },
+    { 
+      "type": "vcs",
+      "url": "https://github.com/fufu70/CurlClass.git"
     }
     ...
 }
@@ -28,7 +36,9 @@ To include the SendGrid-LightWeight-PHP-API in your composer file add the repo d
 
 "require": {
     ...
-    "fufu70/sendgrid-lightweight-php-api": "dev-master",
+    "fufu70/sendgrid-lightweight-php-api": "dev-master",,
+    "fufu70/reflection-class": "dev-master",
+    "fufu70/curl-class": "dev-master"
     ...
 }
 ```
