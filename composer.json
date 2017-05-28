@@ -6,11 +6,16 @@
     	{ 
 	      "type": "vcs", 
 	      "url": "https://github.com/fufu70/ReflectionClass.git"
-	    }
+	    },
+        { 
+          "type": "vcs", 
+          "url": "https://github.com/fufu70/CurlClass.git"
+        }
     ],
     "require": {
         "php": ">=5.1.0",
         "yiisoft/yii": "1.1.*",
-        "fufu70/reflection-class": "dev-master"
+        "fufu70/reflection-class": "dev-master",
+        "fufu70/curl-class": "dev-master"
     }
 }

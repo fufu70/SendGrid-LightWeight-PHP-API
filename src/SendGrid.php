@@ -10,6 +10,7 @@
 namespace SendGrid_Restful;
 
 use Common\Reflection;
+use Common\Curl;
 
 /**
  * The SendGrid class.
@@ -26,7 +27,7 @@ class SendGrid extends \CApplicationComponent
     const BUTTON_LINK = '[%button_link%]';
     const PREHEADER = '[%preheader-text%]';
 
-    private static $_curl_class = 'SendGrid_Restful\\Curl';
+    private static $_curl_class = 'Common\\Curl';
 
     /**
      * Sends a post to the SendGrid api.

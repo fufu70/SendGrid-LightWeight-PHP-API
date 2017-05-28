@@ -7,7 +7,7 @@
 <bootstrap />
 
 <!-- A phpDox project to process, you can have multiple projects in one config file -->
-<project name="deadbody-php" source="${basedir}/../src/" workdir="${basedir}/phpdox/xml">
+<project name="sendgrid-lightweight-api" source="${basedir}/../src/" workdir="${basedir}/phpdox/xml">
     <!--  @name    - The name of the project -->
     <!--  @source  - The source directory of the application to process -->
     <!--  @workdir - The directory to store the xml data files in -->

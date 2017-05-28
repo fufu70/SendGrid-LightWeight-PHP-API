@@ -9,7 +9,7 @@
          syntaxCheck="false"
         >
 	<testsuites>
-        <testsuite name="CommonPHP">
+        <testsuite name="SendGrid_Restful">
             <directory suffix=".php">../tests</directory>
         </testsuite>
     </testsuites>
