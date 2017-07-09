@@ -91,4 +91,4 @@ SendGrid::send(
 
 ## Example Email Template
 
-An example of an email template utilized in testing is located at [common/template-example.html](https://github.com/fufu70/SendGrid-LightWeight-PHP-API/blob/master/common/template-example.html)
+An example of an email template utilized in testing is located at [common/template-example.html](https://github.com/fufu70/SendGrid-LightWeight-PHP-API/blob/master/common/template-example.html). Simply create a ["Transactional" template](https://sendgrid.com/docs/User_Guide/Transactional_Templates/index.html) in your dashboard, go to the code section of the **Template Edit** page, and paste the following code in [common/template-example.html](https://github.com/fufu70/SendGrid-LightWeight-PHP-API/blob/master/common/template-example.html) into the text-area.
