@@ -36,7 +36,7 @@ To include the SendGrid-LightWeight-PHP-API in your composer file add the repo d
 
 "require": {
     ...
-    "fufu70/sendgrid-lightweight-php-api": "dev-master",,
+    "fufu70/sendgrid-lightweight-php-api": "dev-master",
     "fufu70/reflection-class": "dev-master",
     "fufu70/curl-class": "dev-master"
     ...
