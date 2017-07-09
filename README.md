@@ -88,3 +88,7 @@ SendGrid::send(
 );
 
 ```
+
+## Example Email Template
+
+An example of an email template utilized in testing is located at [https://github.com/fufu70/SendGrid-LightWeight-PHP-API/blob/master/common/template-example.html](https://github.com/fufu70/SendGrid-LightWeight-PHP-API/blob/master/common/template-example.html)
