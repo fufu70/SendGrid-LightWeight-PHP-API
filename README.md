@@ -36,7 +36,7 @@ To include the SendGrid-LightWeight-PHP-API in your composer file add the repo d
 
 "require": {
     ...
-    "fufu70/sendgrid-lightweight-php-api": "dev-master",
+    "fufu70/sendgrid-lightweight-api": "dev-master",
     "fufu70/reflection-class": "dev-master",
     "fufu70/curl-class": "dev-master"
     ...
@@ -59,5 +59,32 @@ Add in your Sendgrid specific parameters inside of your config/params.php file
 	]
 
 ...
+
+```
+
+## Send an email
+
+Use the `SendGrid` class `send` function by giving it an email address to send to, a subject field and substitutions for your email template. The current email template substitutions in the API include:
+
+* TEXT = `[%text%]`
+* BUTTON_TEXT = `[%button_text%]`
+* BUTTON_LINK = `[%button_link%]`
+* PREHEADER = `[%preheader-text%]`
+
+```php
+<?php
+
+use SendGrid_Restful\SendGrid;
+
+SendGrid::send(
+	"email@example.com",
+	"My Hello World Email",
+	[
+		SendGrid::TEXT => ['Error: ' . $error_message],
+		SendGrid::PREHEADER => ['An error has occured.'],
+		SendGrid::BUTTON_TEXT => ['What my button will say'],
+		SendGrid::BUTTON_LINK => ['http://wheretheuserwillgowhenclickingthis.button']
+	]
+);
 
 ```
