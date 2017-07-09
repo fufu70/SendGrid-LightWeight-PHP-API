@@ -80,8 +80,8 @@ SendGrid::send(
 	"email@example.com",
 	"My Hello World Email",
 	[
-		SendGrid::TEXT => ['Error: ' . $error_message],
-		SendGrid::PREHEADER => ['An error has occured.'],
+		SendGrid::TEXT => ['The text inside of my email'],
+		SendGrid::PREHEADER => ['An preheader used to display inside of the subject if not supplied.'],
 		SendGrid::BUTTON_TEXT => ['What my button will say'],
 		SendGrid::BUTTON_LINK => ['http://wheretheuserwillgowhenclickingthis.button']
 	]
